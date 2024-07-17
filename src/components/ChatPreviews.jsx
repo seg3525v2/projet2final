@@ -14,7 +14,7 @@ export default function Chat() {
         <div className="bg-white flex flex-col items-center justify-center rounded-xl">
           <div className="bg-oilers flex flex-row gap-2 items-center justify-center w-full rounded-t-xl py-4">
             <img src={oilers} alt="Oilers Image" className="w-16 h-16" />
-            <h2 className="font-bold text-white">{t("chat.oilers")}</h2>
+            <h2 className="font-bold text-white">{t("chat.oilersHub")}</h2>
           </div>
           <div className="border w-full">
             <div>
@@ -46,7 +46,7 @@ export default function Chat() {
         <div className="bg-white flex flex-col items-center justify-center rounded-xl">
           <div className="bg-panthers flex flex-row gap-2 items-center justify-center w-full rounded-t-xl py-4">
             <img src={panthers} alt="Panthers Logo" className="w-16 h-16" />
-            <h2 className="font-bold text-white">{t("chat.panthers")}</h2>
+            <h2 className="font-bold text-white">{t("chat.panthersHub")}</h2>
           </div>
           <div className="border w-full">
             <div>

@@ -44,6 +44,8 @@ export default function Navigation() {
           <button
             className="flex w-16 items-center justify-center border-2 rounded-xl p-4 cursor-pointer font-bold transition-all duration-200 hover:bg-neutral-800"
             type="submit"
+            title="Localization Button"
+            aria-label="Localization Button"
             onClick={() => {
               locale.set($locale === "en" ? "fr" : "en");
             }}
@@ -77,6 +79,8 @@ export default function Navigation() {
           </ul>
           <button
             className="hidden md:block"
+            title="Navigation Menu"
+            aria-label="Navigation Menu"
             onClick={() => {
               setSidebarOpen(!sidebarOpen);
             }}
