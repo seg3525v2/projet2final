@@ -13,7 +13,7 @@ export default function Footer() {
         <div
           className="flex flex-row items-center gap-4 cursor-pointer"
           onClick={() => {
-            window.location.href = "/projet2/";
+            window.location.href = "/projet2final/";
           }}
         >
           <img src={logo} alt="Cup Quest logo" className="w-10 h-10" />
