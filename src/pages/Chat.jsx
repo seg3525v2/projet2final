@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { t } from "../i18n";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import questionmark from "../assets/questionmark.svg";
 
 export default function Chat() {
   const notify = () => {
@@ -35,6 +36,11 @@ export default function Chat() {
       setNewMessage1("");
     } else {
       notify();
+      setNewMessage1("");
+      document.getElementById("input1").style.border = "2px solid red";
+      setTimeout(() => {
+        document.getElementById("input1").style.border = "1px solid #e2e8f0";
+      }, 5000);
     }
   };
 
@@ -69,6 +75,11 @@ export default function Chat() {
       setNewMessage2("");
     } else {
       notify();
+      setNewMessage2("");
+      document.getElementById("input2").style.border = "2px solid red";
+      setTimeout(() => {
+        document.getElementById("input2").style.border = "1px solid #e2e8f0";
+      }, 5000);
     }
   };
 
@@ -77,6 +88,21 @@ export default function Chat() {
       <ToastContainer />
       <h1 className="text-3xl font-bold text-center p-4 mb-10">
         {t("chat.title")}
+        <span>
+          <img
+            src={questionmark}
+            alt="Question Mark"
+            className="w-8 h-8 inline-block ml-2 cursor-pointer duration-200 hover:opacity-75"
+            onClick={() => {
+              toast.info(
+                "Règles et Directives: Soyez respectueux, pas de spam, pas de discours haineux, pas de contenu inapproprié. Les contrevenants seront bannis. Profitez du chat! :)                            Rules and Guidelines: Be respectful, no spamming, no hate speech, no inappropriate content. Violators will be banned. Enjoy the chat! :)",
+                {
+                  position: "top-right",
+                }
+              );
+            }}
+          />
+        </span>
       </h1>
       <div className="flex flex-col items-center justify-center w-10/12">
         <div className="flex justify-between items-center mb-6 w-full">
@@ -110,6 +136,7 @@ export default function Chat() {
           </div>
           <div className="flex items-center mt-4 p-4 bg-gray-300 rounded-b-lg">
             <input
+              id="input1"
               type="text"
               className="flex-1 p-2 border rounded mr-4"
               placeholder={t("chat.type")}
@@ -148,6 +175,7 @@ export default function Chat() {
           </div>
           <div className="flex items-center mt-4 p-4 bg-gray-300 rounded-b-lg">
             <input
+              id="input2"
               type="text"
               className="flex-1 p-2 border rounded mr-4"
               placeholder={t("chat.type")}
