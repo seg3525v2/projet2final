@@ -29,7 +29,7 @@ export default function Navigation() {
     <>
       <nav
         id="navbar"
-        className="bg-black h-20 w-full sticky text-white flex justify-between items-center px-8 py-2 font-bold shadow-lg transition-all duration-300"
+        className="bg-black h-20 z-50 w-full sticky text-white flex justify-between items-center px-8 py-2 font-bold shadow-lg transition-all duration-300"
       >
         <div className="flex flex-row gap-8 justify-start items-center">
           <div

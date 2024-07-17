@@ -109,11 +109,6 @@ export default function Chat() {
             ))}
           </div>
           <div className="flex items-center mt-4 p-4 bg-gray-300 rounded-b-lg">
-            <button className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center mr-4">
-              <span role="img" aria-label="Emoji Selector">
-                😎
-              </span>
-            </button>
             <input
               type="text"
               className="flex-1 p-2 border rounded mr-4"
@@ -152,11 +147,6 @@ export default function Chat() {
             ))}
           </div>
           <div className="flex items-center mt-4 p-4 bg-gray-300 rounded-b-lg">
-            <button className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center mr-4">
-              <span role="img" aria-label="Emoji Selector">
-                😎
-              </span>
-            </button>
             <input
               type="text"
               className="flex-1 p-2 border rounded mr-4"

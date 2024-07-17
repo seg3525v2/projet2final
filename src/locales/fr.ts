@@ -112,5 +112,6 @@ export default {
     tip4title: "Suivre les blessures et les suspensions",
     tip4desc:
       "Les blessures et les suspensions sont des facteurs importants dans la Fantasy Hockey. Assurez-vous de suivre les nouvelles et de remplacer les joueurs blessés par des joueurs en santé. Les joueurs qui reviennent de blessure peuvent être de bons choix car ils sont souvent sous-évalués.",
+    stats: "Voir les Statistiques",
   },
 };

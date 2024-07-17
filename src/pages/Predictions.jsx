@@ -3,6 +3,11 @@ import panthers from "../assets/panthers.png";
 import mcdavid from "../assets/mcdavid.png";
 import barkov from "../assets/barkov.png";
 import { t } from "../i18n";
+import hockey from "../assets/hockey.svg";
+import hockeymask from "../assets/hockeymask.svg";
+import hockeysticks from "../assets/hockeysticks.svg";
+import medic from "../assets/medic.svg";
+import { Link } from "react-router-dom";
 
 export default function Predictions() {
   return (
@@ -164,7 +169,10 @@ export default function Predictions() {
           <div className="grid grid-cols-2 gap-4">
             <div className="flex flex-col items-center border-4 border-blue-500 bg-slate-100 p-4 rounded-lg transition-all duration-200  hover:bg-blue-300">
               <span className="text-2xl font-bold mb-2">1</span>
-              <span className="text-lg">{t("fantasy.tip1title")}</span>
+              <span className="text-lg flex flex-row gap-2">
+                {t("fantasy.tip1title")}
+                <img src={hockeymask} alt="Hockey stick" className="w-6 h-6" />
+              </span>
               <span className="text-md text-neutral-500 mb-8">
                 (ex: Connor Hellebuyck, Andrei Vasilevskiy)
               </span>
@@ -172,15 +180,31 @@ export default function Predictions() {
             </div>
             <div className="flex flex-col items-center border-4 border-blue-500 bg-slate-100 p-4 rounded-lg transition-all duration-200  hover:bg-blue-300">
               <span className="text-2xl font-bold mb-2">2</span>
-              <span className="text-lg">{t("fantasy.tip2title")}</span>
+              <span className="text-lg flex flex-row gap-2">
+                {t("fantasy.tip2title")}
+                <img src={hockey} alt="Hockey stick" className="w-6 h-6" />
+              </span>
               <span className="text-md text-neutral-500 mb-8">
                 (ex: Connor McDavid, Leon Draisaitl)
               </span>
               <span>{t("fantasy.tip2desc")}</span>
+              <Link
+                className="bg-blue-500 text-white py-2 px-4 rounded duration-200 hover:bg-hover mt-4"
+                to="/statistiques"
+              >
+                {t("fantasy.stats")}
+              </Link>
             </div>
             <div className="flex flex-col items-center border-4 border-blue-500 bg-slate-100 p-4 rounded-lg transition-all duration-200  hover:bg-blue-300">
               <span className="text-2xl font-bold mb-2">3</span>
-              <span className="text-lg">{t("fantasy.tip3title")}</span>
+              <span className="text-lg flex flex-row gap-2">
+                {t("fantasy.tip3title")}
+                <img
+                  src={hockeysticks}
+                  alt="Hockey stick"
+                  className="w-6 h-6"
+                />
+              </span>
               <span className="text-md text-neutral-500 mb-8">
                 (ex: Échanger un gardien contre un attaquant)
               </span>
@@ -188,7 +212,10 @@ export default function Predictions() {
             </div>
             <div className="flex flex-col items-center border-4 border-blue-500 bg-slate-100 p-4 rounded-lg transition-all duration-200  hover:bg-blue-300">
               <span className="text-2xl font-bold mb-2">4</span>
-              <span className="text-lg">{t("fantasy.tip3title")}</span>
+              <span className="text-lg flex flex-row gap-2">
+                {t("fantasy.tip4title")}
+                <img src={medic} alt="Hockey stick" className="w-6 h-6" />
+              </span>
               <span className="text-md text-neutral-500 mb-8">
                 (ex: Remplacer un joueur blessé par un joueur en santé)
               </span>

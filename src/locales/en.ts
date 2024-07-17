@@ -113,5 +113,7 @@ export default {
     tip4title: "Stay informed",
     tip4desc:
       "Staying informed is key to winning a Fantasy Hockey league. Make sure to keep up to date on player injuries, player trades, and player performance. Knowing which players are hot and which players are cold is essential to making good lineup decisions.",
+    stats: "See Stats",
   },
+  
 };
