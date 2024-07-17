@@ -213,14 +213,50 @@ export default function Stats() {
         <table className="border border-black bg-slate-100 rounded-xl">
           <thead>
             <tr className="border border-black">
-              <th className="p-4 text-center">{t("stats.player")}</th>
-              <th className="p-4 text-center">{t("stats.team")}</th>
+              <th className="p-4 text-center">{t("stats.player")} &#9786;</th>
+              <th
+                className={`p-4 text-center ${
+                  sortBy == "team" && "bg-yellow-200"
+                }`}
+              >
+                {t("stats.team")}
+              </th>
               <th className="p-4 text-center">{t("stats.position")}</th>
-              <th className="p-4 text-center">{t("stats.points")}</th>
-              <th className="p-4 text-center">{t("stats.goals")}</th>
-              <th className="p-4 text-center">{t("stats.assists")}</th>
-              <th className="p-4 text-center">{t("stats.gamesPlayed")}</th>
-              <th className="p-4 text-center">{t("stats.plusMinus")}</th>
+              <th
+                className={`p-4 text-center ${
+                  sortBy == "points" && "bg-yellow-200"
+                }`}
+              >
+                {t("stats.points")} &#9733;
+              </th>
+              <th
+                className={`p-4 text-center ${
+                  sortBy == "goals" && "bg-yellow-200"
+                }`}
+              >
+                {t("stats.goals")}
+              </th>
+              <th
+                className={`p-4 text-center ${
+                  sortBy == "assists" && "bg-yellow-200"
+                }`}
+              >
+                {t("stats.assists")}
+              </th>
+              <th
+                className={`p-4 text-center ${
+                  sortBy == "gamesPlayed" && "bg-yellow-200"
+                }`}
+              >
+                {t("stats.gamesPlayed")}
+              </th>
+              <th
+                className={`p-4 text-center ${
+                  sortBy == "plusMinus" && "bg-yellow-200"
+                }`}
+              >
+                {t("stats.plusMinus")} &#177;
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -234,13 +270,49 @@ export default function Stats() {
                   }`}
                 >
                   <td className="p-4 text-center">{player.name}</td>
-                  <td className="p-4 text-center">{player.team}</td>
+                  <td
+                    className={`p-4 text-center ${
+                      sortBy == "team" && "bg-yellow-200"
+                    }`}
+                  >
+                    {player.team}
+                  </td>
                   <td className="p-4 text-center">{player.position}</td>
-                  <td className="p-4 text-center">{player.points}</td>
-                  <td className="p-4 text-center">{player.goals}</td>
-                  <td className="p-4 text-center">{player.assists}</td>
-                  <td className="p-4 text-center">{player.gamesPlayed}</td>
-                  <td className="p-4 text-center">{player.plusMinus}</td>
+                  <td
+                    className={`p-4 text-center ${
+                      sortBy == "points" && "bg-yellow-200"
+                    }`}
+                  >
+                    {player.points}
+                  </td>
+                  <td
+                    className={`p-4 text-center ${
+                      sortBy == "goals" && "bg-yellow-200"
+                    }`}
+                  >
+                    {player.goals}
+                  </td>
+                  <td
+                    className={`p-4 text-center ${
+                      sortBy == "assists" && "bg-yellow-200"
+                    }`}
+                  >
+                    {player.assists}
+                  </td>
+                  <td
+                    className={`p-4 text-center ${
+                      sortBy == "gamesPlayed" && "bg-yellow-200"
+                    }`}
+                  >
+                    {player.gamesPlayed}
+                  </td>
+                  <td
+                    className={`p-4 text-center ${
+                      sortBy == "plusMinus" && "bg-yellow-200"
+                    }`}
+                  >
+                    {player.plusMinus}
+                  </td>
                 </tr>
               ))}
           </tbody>

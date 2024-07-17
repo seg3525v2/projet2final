@@ -22,7 +22,7 @@ export default function Predictions() {
           <div className="grid grid-cols-2 w-full gap-4">
             <div
               id="vote1green"
-              className="flex flex-col items-center border-4 border-green-500 bg-slate-100 p-4 rounded-lg"
+              className="relative flex flex-col items-center border-4 border-green-500 bg-slate-100 p-4 rounded-lg"
             >
               <img src={oilers} alt="Oilers Logo" className="w-16 h-16 mb-4" />
               <span className="text-2xl font-bold mb-2">54%</span>
@@ -37,10 +37,13 @@ export default function Predictions() {
               >
                 {t("predictions.vote")}
               </button>
+              <span className="absolute top-2 right-2 text-green-500 text-3xl">
+                &#9650;
+              </span>
             </div>
             <div
               id="vote1red"
-              className="flex flex-col items-center border-4 border-red-500 bg-slate-100 p-4 rounded-lg"
+              className="relative flex flex-col items-center border-4 border-red-500 bg-slate-100 p-4 rounded-lg"
             >
               <img
                 src={panthers}
@@ -59,6 +62,9 @@ export default function Predictions() {
               >
                 {t("predictions.vote")}
               </button>
+              <span className="absolute top-2 right-2 text-red-500 text-3xl">
+                &#9660;
+              </span>
             </div>
           </div>
         </div>
@@ -69,7 +75,7 @@ export default function Predictions() {
           <div className="grid grid-cols-3 gap-4">
             <div
               id="vote2green1"
-              className="flex flex-col items-center border-4 border-red-500 bg-slate-100 p-4 rounded-lg"
+              className="relative flex flex-col items-center border-4 border-red-500 bg-slate-100 p-4 rounded-lg"
             >
               <img
                 src={mcdavid}
@@ -90,10 +96,13 @@ export default function Predictions() {
               >
                 {t("predictions.vote")}
               </button>
+              <span className="absolute top-2 right-2 text-red-500 text-3xl">
+                &#9660;
+              </span>
             </div>
             <div
               id="vote2green2"
-              className="flex flex-col items-center border-4 border-red-500 bg-slate-100 p-4 rounded-lg"
+              className="relative flex flex-col items-center border-4 border-red-500 bg-slate-100 p-4 rounded-lg"
             >
               <img
                 src={barkov}
@@ -114,10 +123,13 @@ export default function Predictions() {
               >
                 {t("predictions.vote")}
               </button>
+              <span className="absolute top-2 right-2 text-red-500 text-3xl">
+                &#9660;
+              </span>
             </div>
             <div
               id="vote2red"
-              className="flex flex-col items-center border-4 border-green-500 bg-slate-100 p-4 rounded-lg"
+              className="relative flex flex-col items-center border-4 border-green-500 bg-slate-100 p-4 rounded-lg"
             >
               <span className="text-2xl font-bold mb-2">
                 {t("predictions.other")}
@@ -136,6 +148,9 @@ export default function Predictions() {
               >
                 {t("predictions.vote")}
               </button>
+              <span className="absolute top-2 right-2 text-green-500 text-3xl">
+                &#9650;
+              </span>
             </div>
           </div>
         </div>
